@@ -1,6 +1,7 @@
 package tarea.basedatos.operaciones.Reseña;
 
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
@@ -33,6 +34,8 @@ public class ServiceResena {
     }
 
     public static class ResenaDuplicadaException extends RuntimeException {
-        public ResenaDuplicadaException(String mensaje) { super(mensaje); }
+        public ResenaDuplicadaException(String mensaje) {
+            super(mensaje);
+        }
     }
 }
