@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="demojpa/src/main/java"/>
+	<classpathentry kind="src" path="demojpa/src/test/java"/>
+	<classpathentry kind="src" path="demosexcepciones/src/main/java"/>
+	<classpathentry kind="src" path="demosexcepciones/src/test/java"/>
+	<classpathentry kind="src" path="operaciones/src/main/java"/>
+	<classpathentry kind="src" path="operaciones/src/test/java"/>
+	<classpathentry kind="lib" path="demojpa/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="demosexcepciones/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="operaciones/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
