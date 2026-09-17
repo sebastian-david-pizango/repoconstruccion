@@ -1,5 +1,4 @@
-package main.java.tarea.basedatos.operaciones;
-
+package tarea.basedatos.operaciones;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

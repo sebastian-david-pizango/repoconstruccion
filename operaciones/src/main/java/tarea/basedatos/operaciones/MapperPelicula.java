@@ -1,4 +1,4 @@
-package main.java.tarea.basedatos.operaciones;
+package tarea.basedatos.operaciones;
 
 import org.mapstruct.Mapper;
 import tarea.basedatos.operaciones.RequestPelicula;

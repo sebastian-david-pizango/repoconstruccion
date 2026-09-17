@@ -1,11 +1,7 @@
-package main.java.tarea.basedatos.operaciones;
+package tarea.basedatos.operaciones;
 
 import org.springframework.web.bind.annotation.*;
-import tarea.basedatos.operaciones.RequestPelicula;
-import tarea.basedatos.operaciones.ResponsePelicula;
-import tarea.basedatos.operaciones.MapperPelicula;
-import tarea.basedatos.operaciones.Pelicula;
-import tarea.basedatos.operaciones.ServicePelicula;
+
 
 import java.util.List;
 

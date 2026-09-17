@@ -1,8 +1,7 @@
-package main.java.tarea.basedatos.operaciones;
+package tarea.basedatos.operaciones;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import tarea.basedatos.operaciones.Pelicula;
 
 import java.util.List;
 
