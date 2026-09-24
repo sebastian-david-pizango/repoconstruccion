@@ -1,8 +1,8 @@
-package relaciones.tarea2.cu.registrarmenu;
+package relaciones.entity.tarea2.cu.registrarmenu;
 
 import org.springframework.web.bind.annotation.*;
-import relaciones.tarea2.cu.registrarmenu.request.RequestMenu;
-import relaciones.tarea2.cu.registrarmenu.response.ResponseMenu;
+import relaciones.entity.tarea2.cu.registrarmenu.request.RequestMenu;
+import relaciones.entity.tarea2.cu.registrarmenu.response.ResponseMenu;
 
 import java.util.List;
 

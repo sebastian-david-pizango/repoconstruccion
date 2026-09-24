@@ -1,4 +1,4 @@
-package relaciones.tarea2.cu.registrarmenu.response;
+package relaciones.entity.tarea2.cu.registrarmenu.response;
 
 import java.util.List;
 

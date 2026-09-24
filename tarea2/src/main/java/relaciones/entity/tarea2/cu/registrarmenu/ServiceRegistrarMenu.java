@@ -1,15 +1,14 @@
-package relaciones.tarea2.cu.registrarmenu;
+package relaciones.entity.tarea2.cu.registrarmenu;
 
 import org.springframework.stereotype.Service;
-import relaciones.tarea2.cu.registrarmenu.request.RequestMenu;
-import relaciones.tarea2.cu.registrarmenu.request.RequestMenu.RequestMenuItem;
-import relaciones.tarea2.cu.registrarmenu.response.ResponseMenu;
-import relaciones.tarea2.entity.Menu;
-import relaciones.tarea2.entity.Plato;
-import relaciones.tarea2.repository.RepoMenu;
-import relaciones.tarea2.repository.RepoPlato;
+import relaciones.entity.tarea2.cu.registrarmenu.request.RequestMenu;
+import relaciones.entity.tarea2.cu.registrarmenu.request.RequestMenu.RequestMenuItem;
+import relaciones.entity.tarea2.cu.registrarmenu.response.ResponseMenu;
+import relaciones.entity.tarea2.dominio.entity.Menu;
+import relaciones.entity.tarea2.dominio.entity.Plato;
+import relaciones.entity.tarea2.dominio.repository.RepoMenu;
+import relaciones.entity.tarea2.dominio.repository.RepoPlato;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service

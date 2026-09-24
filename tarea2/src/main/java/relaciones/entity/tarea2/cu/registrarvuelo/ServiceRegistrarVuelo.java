@@ -1,13 +1,13 @@
-package relaciones.tarea2.cu.registrarvuelo;
+package relaciones.entity.tarea2.cu.registrarvuelo;
 
 import org.springframework.stereotype.Service;
-import relaciones.tarea2.cu.registrarvuelo.request.RequestVuelo;
-import relaciones.tarea2.cu.registrarvuelo.request.RequestVuelo.RequestVueloItem;
-import relaciones.tarea2.cu.registrarvuelo.response.ResponseVuelo;
-import relaciones.tarea2.entity.Pasajero;
-import relaciones.tarea2.entity.Vuelo;
-import relaciones.tarea2.repository.RepoPasajero;
-import relaciones.tarea2.repository.RepoVuelo;
+import relaciones.entity.tarea2.cu.registrarvuelo.request.RequestVuelo;
+import relaciones.entity.tarea2.cu.registrarvuelo.request.RequestVuelo.RequestVueloItem;
+import relaciones.entity.tarea2.cu.registrarvuelo.response.ResponseVuelo;
+import relaciones.entity.tarea2.dominio.entity.Pasajero;
+import relaciones.entity.tarea2.dominio.entity.Vuelo;
+import relaciones.entity.tarea2.dominio.repository.RepoPasajero;
+import relaciones.entity.tarea2.dominio.repository.RepoVuelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,6 @@ public class ServiceRegistrarVuelo {
         return toResponse(vuelo);
     }
 
-    // === GET por id ===
     public ResponseVuelo consultarVuelo(int id) {
         Vuelo vuelo = repoVuelo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Vuelo no encontrado con id: " + id));

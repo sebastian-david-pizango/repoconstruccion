@@ -1,8 +1,8 @@
-package relaciones.tarea2.cu.registrarvuelo;
+package relaciones.entity.tarea2.cu.registrarvuelo;
 
 import org.springframework.web.bind.annotation.*;
-import relaciones.tarea2.cu.registrarvuelo.request.RequestVuelo;
-import relaciones.tarea2.cu.registrarvuelo.response.ResponseVuelo;
+import relaciones.entity.tarea2.cu.registrarvuelo.request.RequestVuelo;
+import relaciones.entity.tarea2.cu.registrarvuelo.response.ResponseVuelo;
 
 import java.util.List;
 

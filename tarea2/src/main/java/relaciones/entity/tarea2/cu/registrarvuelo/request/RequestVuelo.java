@@ -1,4 +1,4 @@
-package relaciones.tarea2.cu.registrarvuelo.request;
+package relaciones.entity.tarea2.cu.registrarvuelo.request;
 
 import java.util.List;
 

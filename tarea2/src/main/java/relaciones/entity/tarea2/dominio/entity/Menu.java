@@ -1,4 +1,4 @@
-package relaciones.tarea2.entity;
+package relaciones.entity.tarea2.dominio.entity;
 
 import jakarta.persistence.*;
 

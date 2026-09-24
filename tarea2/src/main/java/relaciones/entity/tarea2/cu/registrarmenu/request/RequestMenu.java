@@ -1,4 +1,4 @@
-package relaciones.tarea2.cu.registrarmenu.request;
+package relaciones.entity.tarea2.cu.registrarmenu.request;
 
 import java.util.List;
 
