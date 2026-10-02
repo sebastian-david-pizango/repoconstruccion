@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pe.edu.uls.demojpa.cu.registrarpedido.request.RequestPedido;
 import pe.edu.uls.demojpa.cu.registrarpedido.response.ResponsePedido;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -22,5 +23,11 @@ public class ControllerRegistrarPedido {
     public ResponsePedido guardarPedido(@RequestBody RequestPedido pedido) {
         return serviceRegistrarPedido.registrarPedido(pedido);
     }
+
+     @GetMapping("/hola")
+        public String guardarPedido() {
+        return "hola";
+    }
+
     
 }
