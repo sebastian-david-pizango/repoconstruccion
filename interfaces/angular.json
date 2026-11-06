@@ -59,9 +59,16 @@
               "buildTarget": "interfaces:build:production"
             },
             "development": {
-              "buildTarget": "interfaces:build:development"
-            }
-          },
+      "buildTarget": "interfaces:build:development",
+      "security": {
+        "allowedHosts": [
+          "localhost",
+          "127.0.0.1",
+          "*.app.github.dev"
+        ]
+      }
+      }
+    },
           "defaultConfiguration": "development"
         },
         "test": {

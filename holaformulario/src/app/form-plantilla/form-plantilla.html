@@ -1,0 +1,130 @@
+<h2>Registro de Personas</h2>
+
+<form #miForm="ngForm" (ngSubmit)="onSubmit(miForm)">
+
+  <div class="campo">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre" ngModel required minlength="3" #nombre="ngModel">
+    
+    <div class="error" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+      <div *ngIf="nombre.errors?.['required']">Nombre es obligatorio</div>
+      <div *ngIf="nombre.errors?.['minlength']">Mínimo 3 caracteres</div>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" name="edad" ngModel required min="18" max="99" #edad="ngModel">
+    
+    <div class="error" *ngIf="edad.invalid && (edad.dirty || edad.touched)">
+      <div *ngIf="edad.errors?.['required']">Edad es obligatorio</div>
+      <div *ngIf="edad.errors?.['min']">Mínimo no válido (debe ser 18+)</div>
+      <div *ngIf="edad.errors?.['max']">Máximo no válido (hasta 99)</div>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="generoMusica">Género de música preferido</label>
+    <select id="generoMusica" name="generoMusica" ngModel required #genero="ngModel">
+      <option value="">-- Selecciona --</option>
+      <option value="Rock">Rock</option>
+      <option value="Pop">Pop</option>
+      <option value="Reggaeton">Reggaeton</option>
+      <option value="Cumbia">Cumbia</option>
+      <option value="Jazz">Jazz</option>
+      <option value="Clasica">Clásica</option>
+    </select>
+    
+    <div class="error" *ngIf="genero.invalid && (genero.dirty || genero.touched)">
+      <div *ngIf="genero.errors?.['required']">Género es obligatorio</div>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="pokemon">Pokemon favorito</label>
+    <input type="text" id="pokemon" name="pokemon" ngModel required pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]+" #pokemon="ngModel">
+    
+    <div class="error" *ngIf="pokemon.invalid && (pokemon.dirty || pokemon.touched)">
+      <div *ngIf="pokemon.errors?.['required']">Pokemon es obligatorio</div>
+      <div *ngIf="pokemon.errors?.['pattern']">Solo se permiten letras</div>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="lugar">Lugar que quieres conocer</label>
+    <input type="text" id="lugar" name="lugar" ngModel required maxlength="40" #lugar="ngModel">
+    
+    <div class="error" *ngIf="lugar.invalid && (lugar.dirty || lugar.touched)">
+      <div *ngIf="lugar.errors?.['required']">Lugar es obligatorio</div>
+      <div *ngIf="lugar.errors?.['maxlength']">Máximo 40 caracteres</div>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label>¿Ha sido operado?</label>
+    <div class="radios">
+      <label><input type="radio" name="operado" value="Si" ngModel required #operado="ngModel"> Sí</label>
+      <label><input type="radio" name="operado" value="No" ngModel required> No</label>
+    </div>
+    
+    <div class="error" *ngIf="operado.invalid && (operado.dirty || operado.touched)">
+      <div *ngIf="operado.errors?.['required']">Debes indicar si ha sido operado</div>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="miedo">Miedo irracional</label>
+    <textarea id="miedo" name="miedo" rows="2" ngModel required minlength="5" #miedo="ngModel"></textarea>
+    
+    <div class="error" *ngIf="miedo.invalid && (miedo.dirty || miedo.touched)">
+      <div *ngIf="miedo.errors?.['required']">Miedo irracional es obligatorio</div>
+      <div *ngIf="miedo.errors?.['minlength']">Mínimo 5 caracteres</div>
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="festividad">Festividad preferida</label>
+    <input type="text" id="festividad" name="festividad" ngModel required #festividad="ngModel">
+    
+    <div class="error" *ngIf="festividad.invalid && (festividad.dirty || festividad.touched)">
+      <div *ngIf="festividad.errors?.['required']">Festividad es obligatoria</div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="miForm.invalid">Enviar</button>
+</form>
+
+<h3>Personas registradas</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Música</th>
+      <th>Pokemon</th>
+      <th>Lugar</th>
+      <th>Operado</th>
+      <th>Miedo</th>
+      <th>Festividad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngIf="registros.length === 0">
+      <td colspan="9" style="text-align: center; color: gray;">Aún no hay personas registradas</td>
+    </tr>
+
+    <tr *ngFor="let p of registros; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ p.nombre }}</td>
+      <td>{{ p.edad }}</td>
+      <td>{{ p.generoMusica }}</td>
+      <td>{{ p.pokemon }}</td>
+      <td>{{ p.lugar }}</td>
+      <td>{{ p.operado }}</td>
+      <td>{{ p.miedo }}</td>
+      <td>{{ p.festividad }}</td>
+    </tr>
+  </tbody>
+</table>
