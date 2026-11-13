@@ -1,0 +1,26 @@
+<h2>Lista de contactos</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Cargo</th>
+      <th>Horario<th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (contactos of contactos; track contactos.id) {
+      <tr>
+        <td>{{ contactos.id }}</td>
+        <td>{{ contactos.nombre }}</td>
+        <td>{{ contactos.cargo }}</td>
+        <td>{{ contactos.horario }}</td>
+    } @empty {
+      <tr>
+        <td colspan="3">No hay productos disponibles</td>
+      </tr>
+    }
+  </tbody>
+</table>
